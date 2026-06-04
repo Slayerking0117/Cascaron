@@ -23,27 +23,27 @@ export function registerView(){
             <a class="rounded-full border border-blue-200 px-4 py-2 text-sm font-semibold text-blue-700 hover:bg-blue-50" href="/login">Ya tengo cuenta</a>
           </div>
 
-          <form class="mt-8 grid gap-5">
+          <form method="POST" id = "registros" class="mt-8 grid gap-5">
             <div class="grid gap-5 md:grid-cols-2">
               <div>
                 <label class="mb-2 block text-sm font-medium text-slate-700" for="register-name">Nombre</label>
-                <input id="register-name" type="text" placeholder="Ana" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
+                <input name="name" id="register-name" type="text" placeholder="Ana" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
               </div>
               <div>
                 <label class="mb-2 block text-sm font-medium text-slate-700" for="register-lastname">Apellido</label>
-                <input id="register-lastname" type="text" placeholder="Torres" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
+                <input name="lastname" id="register-lastname" type="text" placeholder="Torres" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
               </div>
             </div>
 
             <div>
               <label class="mb-2 block text-sm font-medium text-slate-700" for="register-email">Correo</label>
-              <input id="register-email" type="email" placeholder="usuario@taskflow.com" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
+              <input name= "email" id="register-email" type="email" placeholder="usuario@taskflow.com" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
             </div>
 
             <div class="grid gap-5 md:grid-cols-2">
               <div>
                 <label class="mb-2 block text-sm font-medium text-slate-700" for="register-password">Contrasena</label>
-                <input id="register-password" type="password" placeholder="Crea una contrasena" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
+                <input name= "password" id="register-password" type="password" placeholder="Crea una contrasena" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
               </div>
               <div>
                 <label class="mb-2 block text-sm font-medium text-slate-700" for="register-role">Rol</label>
@@ -54,14 +54,10 @@ export function registerView(){
               </div>
             </div>
 
-            <a class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-500" href="/login">
-              Registrarme
-            </a>
+            <button type = "submit" class = "inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-500">Registrarme</button>
           </form>
         </div>
       </section>
     </main>
-
-    <script type="module" src="../main.js"></script>
     `
 }
